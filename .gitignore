@@ -1,0 +1,9 @@
+# mac
+.DS_Store
+
+# node modules
+/node_modules
+
+# serverless
+.serverless
+.dynamodb

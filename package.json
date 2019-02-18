@@ -1,0 +1,24 @@
+{
+  "name": "serverless-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls offline start",
+    "deploy": "sls deploy",
+    "create:dynamodb": "sls dynamodb install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.403.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "serverless-http": "^1.9.0"
+  },
+  "devDependencies": {
+    "serverless-dynamodb-local": "0.2.35",
+    "serverless-offline": "^4.4.2"
+  }
+}
