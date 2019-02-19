@@ -6,7 +6,8 @@
   "scripts": {
     "start": "sls offline start",
     "deploy": "sls deploy",
-    "create:dynamodb": "sls dynamodb install"
+    "create:dynamodb": "sls dynamodb install",
+    "seed:dynamodb": "sls dynamodb seed"
   },
   "keywords": [],
   "author": "",

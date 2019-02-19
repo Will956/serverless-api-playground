@@ -71,6 +71,21 @@ app.post('/users', function (req, res) {
     }
     res.json({ userId, name });
   });
-})
+});
+
+app.get('/users', (req, res) => {
+  const params = {
+    TableName: USERS_TABLE
+  };
+
+  dynamoDb.scan(params, (error, result) => {
+    if (error) {
+      console.log(error);
+      res.status(400).json({ error: 'Could not get all users' });
+    }
+    const data = { Items } = result;
+    res.json(Items);
+  });
+});
 
 module.exports.handler = serverless(app);

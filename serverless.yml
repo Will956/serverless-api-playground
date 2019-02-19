@@ -7,8 +7,18 @@ plugins:
 custom:
   tableName: 'users-table-${self:provider.stage}'
   dynamodb:
+    stages:
+      - dev
     start:
+      port: 8000
       migrate: true
+      seed: true
+      convertEmptyValues: true
+    seed:
+      domain:
+        sources:
+          - table: '${self:custom.tableName}'
+            sources: [./seed/users.json]
 
 provider:
   name: aws
