@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/aws-lambda@^8.10.19":
+  version "8.10.31"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.31.tgz#f34c42412e59824efa21717c71024f7d04405b51"
+  integrity sha512-xcmOvzVILQoex1oR+vjKnBP3OJn+g92r3yVzeTSmRgLQwBvSOghRPRSx3rVMQivLzAIR6atxlVu3AV9bxc/hQw==
+
 accept@2.x.x:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/accept/-/accept-2.1.4.tgz#887af54ceee5c7f4430461971ec400c61d09acbb"
@@ -901,10 +906,12 @@ serverless-dynamodb-local@0.2.37:
     dynamodb-localhost "^0.0.7"
     lodash "^4.17.0"
 
-serverless-http@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/serverless-http/-/serverless-http-1.9.0.tgz#2326aa49020d303f374494504325b4c40bd7db41"
-  integrity sha512-FIwGRE8e07ezj4wKIRlagHtoCoBDkxyNuUKujLjKNzpqIVVnXnIzNw1Jh5wW+keZS0ywY3c9QWnQZTRzgpADfw==
+serverless-http@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/serverless-http/-/serverless-http-2.1.0.tgz#8a11802772c38ccaae26ae77b207ee75a2c62530"
+  integrity sha512-cpG42C0qn6CtqJ79hhC/bLE08b2iF6KxtqMn81tm6ZCQ4Jz+mr4XQn4LgfdFPphda7dI02ynPzRpa3rJSoBfJQ==
+  optionalDependencies:
+    "@types/aws-lambda" "^8.10.19"
 
 serverless-offline@^4.10.6:
   version "4.10.6"
